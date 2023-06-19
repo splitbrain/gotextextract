@@ -4,9 +4,11 @@ This is meant as a simple way to extract raw text contents from different file f
 
 It currently supports the following file formats:
 
-  * `pdf` -- using [ledongthuc/pdf](https://github.com/ledongthuc/pdf) 
-  * `docx` -- naive extraction from the xml
-  * `odt` -- naive extraction from the xml 
+  * `pdf` -- PDF using [ledongthuc/pdf](https://github.com/ledongthuc/pdf) 
+  * `docx` -- Microsoft Word, naive extraction from the xml
+  * `odt` -- Open/Libreoffice Document, naive extraction from the xml
+  * `pptx` -- Microsoft Powerpoint, naive extraction from the xml
+  * `odp` -- Open/Libreoffice Presentation, naive extraction from the xml
 
 ## Usage
 
