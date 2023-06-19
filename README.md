@@ -7,3 +7,9 @@ It currently supports the following file formats:
   * `pdf` -- using [ledongthuc/pdf](https://github.com/ledongthuc/pdf) 
   * `docx` -- naive extraction from the xml
   * `odt` -- naive extraction from the xml 
+
+## Usage
+
+    gotextextract [--type <type>] <file>
+
+Simply give the file to extract as argument. If no file type (see above) is given, it will try to guess it from the file extension. The extracted text will be printed to stdout.
