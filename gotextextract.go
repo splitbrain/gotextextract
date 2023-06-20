@@ -4,6 +4,7 @@ import (
 	"archive/zip"
 	"encoding/xml"
 	"flag"
+	"fmt"
 	"github.com/ledongthuc/pdf"
 	"io"
 	"log"
@@ -71,7 +72,7 @@ func dumpPdf(path string) error {
 		rows, _ := p.GetTextByRow()
 		for _, row := range rows {
 			for _, word := range row.Content {
-				print(word.S)
+				fmt.Print(word.S)
 			}
 		}
 	}
@@ -120,11 +121,11 @@ func StripWordXMLTags(r io.Reader) error {
 		}
 		switch tok := tok.(type) {
 		case xml.CharData:
-			print(string(tok))
+			fmt.Print(string(tok))
 		case xml.StartElement:
 			// paragraph or table content
 			if tok.Name.Local == "p" || tok.Name.Local == "tc" {
-				println()
+				fmt.Println()
 			}
 		}
 	}
